@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/confirm_request"
+        android:layout_width="145dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="signOut"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="48dp"
+        app:layout_constraintStart_toEndOf="@+id/goback_confirm"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <Button
+        android:id="@+id/goback_confirm"
+        android:layout_width="144dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/roboto_regular"
+        android:onClick="signOut"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:text="Go Back"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        app:cornerRadius="48dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="308dp"
+        android:layout_height="107dp"
+        android:layout_marginTop="44dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView16"
+        tools:text="By clicking the confirm button, you are confirming that the request was delivered to the one in need for the items in this request:" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="316dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="12dp"
+        android:text="Date of Request: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView13"
+        tools:text="Request Status: " />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="317dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="12dp"
+        android:text="Date of Request: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        tools:text="Address:" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="314dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="28dp"
+        android:text="Date of Request: "
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        tools:text="Date of Request:" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="314dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:text="Date of Request: "
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Confirm that Request was Fulfilled" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

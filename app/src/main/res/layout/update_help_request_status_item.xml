@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="364dp"
+        android:layout_height="191dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/helpRequestStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="[STATUS]"
+            android:textColor="#457373"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/helpRequestDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Date of Request"
+            android:textColor="#457373"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@+id/helpRequestStatusTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="300dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="76dp"
+            android:layerType="software"
+            android:src="@drawable/dotted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpRequestDateTV" />
+
+        <TextView
+            android:id="@+id/awaitingAgencyReplyBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextStateBtn" />
+
+
+        <TextView
+            android:id="@+id/awaitingAgencyReplyTV"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="Awaiting Agency to Reply to Request"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awaitingAgencyReplyBubble" />
+
+        <TextView
+            android:id="@+id/awaitingAgencyReplyDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awaitingAgencyReplyTV" />
+
+
+
+
+        <TextView
+            android:id="@+id/agencyClaimedHelpBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintStart_toEndOf="@id/awaitingAgencyReplyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/nextStateBtn" />
+
+        <TextView
+            android:id="@+id/agencyClaimedHelpTV"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:text="Agency Claimed Request"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/awaitingAgencyReplyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/agencyClaimedHelpBubble" />
+
+        <TextView
+            android:id="@+id/agencyClaimedHelpDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/awaitingAgencyReplyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/agencyClaimedHelpTV" />
+
+
+
+
+        <TextView
+            android:id="@+id/processingBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/inTransitBubble"
+            app:layout_constraintTop_toBottomOf="@+id/nextStateBtn" />
+
+        <TextView
+            android:id="@+id/processingTV"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:text="Agency Processing Request"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/agencyClaimedHelpBubble"
+            app:layout_constraintTop_toBottomOf="@+id/processingBubble" />
+
+        <TextView
+            android:id="@+id/processingDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/agencyClaimedHelpBubble"
+            app:layout_constraintTop_toBottomOf="@+id/processingTV" />
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/inTransitBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toStartOf="@id/requestFulfilledBubble"
+            app:layout_constraintTop_toBottomOf="@+id/nextStateBtn" />
+
+        <TextView
+            android:id="@+id/requestFulfilledTV"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="Agency In Transit"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/processingBubble"
+            app:layout_constraintTop_toBottomOf="@+id/inTransitBubble" />
+
+        <TextView
+            android:id="@+id/requestFulfilledDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/processingBubble"
+            app:layout_constraintTop_toBottomOf="@+id/requestFulfilledTV" />
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/requestFulfilledBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginEnd="24dp"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextStateBtn" />
+
+        <TextView
+            android:id="@+id/requestConfirmedTV"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="Request Fulfilled"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/inTransitBubble"
+            app:layout_constraintTop_toBottomOf="@+id/requestFulfilledBubble" />
+
+        <TextView
+            android:id="@+id/requestConfirmedDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/inTransitBubble"
+            app:layout_constraintTop_toBottomOf="@+id/requestConfirmedTV" />
+
+        <Button
+            android:id="@+id/nextStateBtn"
+            android:layout_width="159dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Next State"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:translationZ="11dp"
+            app:cornerRadius="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpRequestDateTV" />
+
+        <Button
+            android:id="@+id/prevStateBtn"
+            android:layout_width="166dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Prev State"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:translationZ="11dp"
+            app:cornerRadius="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/helpRequestStatusTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

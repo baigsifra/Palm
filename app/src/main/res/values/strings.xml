@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">pALM</string>
+
+    <string name="google_maps_api_key">AIzaSyBOUf-b1Ml1PAjoGSnPoNg4P7Z2MwaEkyQ</string>
+
+    <string-array name="selectSignUp">
+        <item>Sign-up as an Individual</item>
+        <item>Sign-up as an Agency</item>
+        <item>Sign-up as an Employee</item>
+    </string-array>
+</resources>

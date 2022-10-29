@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ViewRequests">
+
+    <ImageView
+        android:id="@+id/imageView_viewRequests"
+        android:layout_width="409dp"
+        android:layout_height="72dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backgrnd_small" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/rosario_semibold"
+        android:text="All Requests"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.532"
+        app:layout_constraintStart_toStartOf="@+id/imageView_viewRequests"
+        app:layout_constraintTop_toTopOf="@+id/imageView_viewRequests" />
+
+    <ImageView
+        android:id="@+id/menubar"
+        android:layout_width="409dp"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_viewRequests"
+        app:srcCompat="@drawable/bar_back" />
+
+
+    <Button
+        android:id="@+id/HelpRequestsButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="8dp"
+        android:text="help requests"
+        android:textColor="#666666"
+        app:layout_constraintStart_toStartOf="@+id/menubar"
+        app:layout_constraintTop_toTopOf="@+id/menubar" />
+
+    <Button
+        android:id="@+id/DonationRequestsButton"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="175dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="donation requests"
+        android:textColor="#666666"
+        app:layout_constraintStart_toEndOf="@+id/HelpRequestsButton"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_viewRequests" />
+
+    <ImageView
+        android:id="@+id/imageView_bookmark_viewRequests_top"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menubar"
+        app:srcCompat="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/textViewDirectRequests"
+        android:layout_width="366dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:text="Direct Requests"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/imageView_bookmark_viewRequests_top"
+        app:layout_constraintTop_toBottomOf="@+id/menubar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_viewRequests_top"
+        android:layout_width="0dp"
+        android:layout_height="152dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_bookmark_viewRequests_top">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <ImageView
+        android:id="@+id/imageView_bookmark_viewRequests_bottom"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:visibility="invisible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_viewRequests_top"
+        app:srcCompat="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/textViewOpenRequests"
+        android:layout_width="366dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:text="Open Requests"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/imageView_bookmark_viewRequests_bottom"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView_viewRequests_top" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_viewRequests_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@+id/menu_bottom"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_bookmark_viewRequests_bottom">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <TableRow
+        android:id="@+id/menu_bottom"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/requestStatusMenuBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/dark_teal"
+            android:drawableTop="@drawable/ic_hand_pointing"
+            android:drawableTint="@color/black"
+            app:cornerRadius="24dp" />
+
+        <Button
+            android:id="@+id/initiateRequestMenuBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/ic_your_requests"
+            android:drawableTint="@color/black"
+            app:cornerRadius="24dp" />
+
+        <Button
+            android:id="@+id/leaderboardMenuBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/leaderboard_icon"
+            android:drawableTint="@color/black"
+            app:cornerRadius="24dp" />
+
+        <Button
+            android:id="@+id/profileMenuBtn"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/white"
+            android:drawableTop="@drawable/profile_icon"
+            android:drawableTint="@color/black"
+            app:cornerRadius="24dp" />
+
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView_bookmark_viewHelpRequests"
+        android:layout_width="40dp"
+        android:layout_height="33dp"
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menubar"
+        app:srcCompat="@drawable/bookmark" />
+
+    <TextView
+        android:id="@+id/textViewHelpRequests"
+        android:layout_width="366dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="4dp"
+        android:text="Help Requests"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/imageView_bookmark_viewHelpRequests"
+        app:layout_constraintTop_toBottomOf="@+id/menubar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_viewHelpRequests"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/menu_bottom"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_bookmark_viewHelpRequests"
+        app:layout_constraintVertical_bias="1.0">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

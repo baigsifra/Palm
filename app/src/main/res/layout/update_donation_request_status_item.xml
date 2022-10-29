@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="350dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white"
+        android:elevation="2dp"
+        android:outlineAmbientShadowColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <TextView
+            android:id="@+id/requestStatusTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="[STATUS]"
+            android:textColor="#457373"
+            android:textSize="18dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/requestDateTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/roboto_regular"
+            android:text="Date of Request"
+            android:textColor="#457373"
+            android:textSize="18dp"
+            app:layout_constraintStart_toEndOf="@+id/requestStatusTV"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="5dp"
+            android:layout_marginTop="56dp"
+            android:layerType="software"
+            android:src="@drawable/dotted"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestDateTV" />
+
+        <TextView
+            android:id="@+id/awaitingAgencyBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+        <TextView
+            android:id="@+id/pickedUpBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="56dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/donationConfirmedBubble"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+        <TextView
+            android:id="@+id/agencyClaimedBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginStart="64dp"
+            android:layout_marginTop="48dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintStart_toEndOf="@id/awaitingAgencyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+        <TextView
+            android:id="@+id/donationConfirmedBubble"
+            android:layout_width="20sp"
+            android:layout_height="20sp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/circle_empty"
+            android:elevation="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+
+        <TextView
+            android:id="@+id/donationConfirmedTV"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="4dp"
+            android:text="Donation Confirmed"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/pickedUpBubble"
+            app:layout_constraintTop_toBottomOf="@+id/donationConfirmedBubble" />
+
+        <TextView
+            android:id="@+id/awaitingAgencyTV"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Acknowledged Request"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awaitingAgencyBubble" />
+
+        <TextView
+            android:id="@+id/awaitingAgencyDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/awaitingAgencyTV" />
+
+        <TextView
+            android:id="@+id/agencyClaimedTV"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="4dp"
+            android:text="Coordinated a pick up time"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/awaitingAgencyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/agencyClaimedBubble" />
+
+        <TextView
+            android:id="@+id/agencyClaimedDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="64dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/awaitingAgencyBubble"
+            app:layout_constraintTop_toBottomOf="@+id/agencyClaimedTV" />
+
+        <TextView
+            android:id="@+id/pickedUpTV"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="4dp"
+            android:text="Picked up items"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/agencyClaimedBubble"
+            app:layout_constraintTop_toBottomOf="@+id/pickedUpBubble" />
+
+        <TextView
+            android:id="@+id/pickedUpDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/agencyClaimedBubble"
+            app:layout_constraintTop_toBottomOf="@+id/pickedUpTV" />
+
+        <TextView
+            android:id="@+id/donationConfirmedDT"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:text="(DATE &amp; TIME)"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintStart_toStartOf="@+id/pickedUpBubble"
+            app:layout_constraintTop_toBottomOf="@+id/donationConfirmedTV" />
+
+        <Button
+            android:id="@+id/signOutBtn2"
+            android:layout_width="159dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:onClick="signOut"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Next State"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+        <Button
+            android:id="@+id/signOutBtn3"
+            android:layout_width="166dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/roboto_regular"
+            android:onClick="signOut"
+            android:paddingLeft="32dp"
+            android:paddingRight="32dp"
+            android:text="Prev State"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            app:cornerRadius="48dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/requestStatusTV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

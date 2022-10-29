@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RequestStatus">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="394dp"
+        android:layout_height="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/backgrnd_small" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:fontFamily="@font/rosario_semibold"
+        android:text="View the Status of Your Request"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="397dp"
+        android:layout_height="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/bar_back" />
+
+    <Button
+        android:id="@+id/initiateHelpRequestCVBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="146dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:onClick="changeViewRequestStatus"
+        android:text="help requests"
+        android:textColor="#666666"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <Button
+        android:id="@+id/initiateDonationRequestCVBtn"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:onClick="changeViewRequestStatus"
+        android:text="donation requests"
+        android:textColor="#666666"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/requestsRV"
+        android:layout_width="match_parent"
+        android:layout_height="475dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2"/>
+
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginBottom="5dp"
+            android:background="#9A9898" />
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/requestStatusMenuBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/dark_teal"
+                android:drawableTop="@drawable/request_status_icon"
+                android:drawableTint="@color/black"
+                app:cornerRadius="24dp" />
+
+            <Button
+                android:id="@+id/initiateRequestMenuBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/initiate_request_icon"
+                android:drawableTint="@color/black"
+                app:cornerRadius="24dp" />
+
+            <Button
+                android:id="@+id/leaderboardMenuBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/leaderboard_icon"
+                android:drawableTint="@color/black"
+                app:cornerRadius="24dp" />
+
+            <Button
+                android:id="@+id/profileMenuBtn"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:backgroundTint="@color/white"
+                android:drawableTop="@drawable/profile_icon"
+                android:drawableTint="@color/black"
+                app:cornerRadius="24dp" />
+        </TableRow>
+
+    </TableLayout>
+
+
+    <TextView
+        android:id="@+id/login_error_message"
+        android:layout_width="301dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="244dp"
+        android:background="#A2DED0"
+        android:elevation="10dp"
+        android:gravity="center_horizontal"
+        android:padding="10dp"
+        android:shadowColor="#333333"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="2"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="34sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="@+id/requestsRV"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.146"
+        tools:text="Login or Signup to View Your Requests" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "932633651774",
+    "project_id": "care-from-over-there",
+    "storage_bucket": "care-from-over-there.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:932633651774:android:deda7bb49028ff07823f6f",
+        "android_client_info": {
+          "package_name": "com.example.homelesspersontracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "932633651774-li44tcqosjp6kjn8po8rtqvvif5p61jv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAdAqzmrgqfq4L2cVugmf_hRMEcge9xZrM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "932633651774-li44tcqosjp6kjn8po8rtqvvif5p61jv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
